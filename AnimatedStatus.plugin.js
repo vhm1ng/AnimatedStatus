@@ -26,9 +26,9 @@ class AnimatedStatus {
 		this.randomize = this.GetData("randomize") || false;
 
 		this.modules = this.modules || (() => {
-			let m = []
-			webpackChunkdiscord_app.push([['AnimatedStatus'], {}, e => { m = m.concat(Object.values(e.c)) }])
-			return m
+			let m = [];
+			webpackChunkdiscord_app.push([['AnimatedStatus'], {}, e => { m = m.concat(e.c ? Object.values(e.c) : []); }])
+			return m;
 		})();
 
 		// Trích xuất file config
